@@ -1,1 +1,4 @@
-console.log('Module 1');
+var greet = function(){
+    console.log('Module 1');
+};
+module.exports = greet;

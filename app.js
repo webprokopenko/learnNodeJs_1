@@ -1,1 +1,2 @@
-require('./module1.js');
+var greet = require('./module1.js');
+greet();
