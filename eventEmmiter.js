@@ -10,6 +10,7 @@ Person.prototype.greet = function(){
 
 function Policeman(){
     this.badgenumber = 123;
+    Person.call(this);
 }
 
 util.inherits(Policeman,Person);
