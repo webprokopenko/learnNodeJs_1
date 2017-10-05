@@ -1,15 +1,17 @@
+'user strict';
+
 var EventEmmiter = require('events');
 var util = require('util');
 
-function Greetr(){
-    this.greeting = "Hello world";
-}
-
-util.inherits(Greetr,EventEmmiter);
-
-Greetr.prototype.greet = function(data){
-    console.log(this.greeting + ": " + data);
-    this.emit('greet',data);
+class Greetr extends EventEmmiter{
+    constructor(){
+        super();
+        this.greeting = "Hello world";
+    }
+    greet(data){
+        console.log(this.greeting + ": " + data);
+        this.emit('greet',data);
+    }
 }
 
 var greeter1  = new Greetr();
