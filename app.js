@@ -12,3 +12,14 @@ util.log(greeting);
 greet.english();
 greet.spanish();
 
+
+var Emmiter = require('./emmiter.js');
+var emtr = new Emmiter();
+emtr.on('greet',function(){
+    console.log('Somewhere someone say Hello');
+});
+emtr.on('greet',function(){
+    console.log('A greeting occured');
+});
+
+emtr.emit('greet');
