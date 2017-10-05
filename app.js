@@ -23,3 +23,16 @@ emtr.on('greet',function(){
 });
 
 emtr.emit('greet');
+
+var EmmiterNode = require('events');
+var eventConfig = require('./config.js').events;
+
+var emtrNode = new EmmiterNode();
+emtrNode.on(eventConfig.GREET,function(){
+    console.log('Somewhere someone say Hello');
+});
+emtrNode.on(eventConfig.GREET,function(){
+    console.log('A greeting occured');
+});
+
+emtrNode.emit(eventConfig.GREET);
