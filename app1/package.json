@@ -10,5 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
   }
 }
