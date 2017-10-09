@@ -1,0 +1,12 @@
+//command for generation this file : npm init
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "description": "npm init",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \" Error: no test specified \" && exit1"
+  },
+  "author": "",
+  "license": "MIT"
+}
