@@ -1,0 +1,19 @@
+{
+  "name": "express1",
+  "version": "1.0.0",
+  "description": "express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webprokopenko/learnNodeJs_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webprokopenko/learnNodeJs_1/issues"
+  },
+  "homepage": "https://github.com/webprokopenko/learnNodeJs_1#readme"
+}
