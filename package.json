@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/webprokopenko/learnNodeJs_1/issues"
   },
-  "homepage": "https://github.com/webprokopenko/learnNodeJs_1#readme"
+  "homepage": "https://github.com/webprokopenko/learnNodeJs_1#readme",
+  "dependencies": {
+    "ejs": "^2.5.7"
+  }
 }
