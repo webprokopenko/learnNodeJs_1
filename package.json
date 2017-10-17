@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/webprokopenko/learnNodeJs_1#readme",
   "dependencies": {
-    "ejs": "^2.5.7"
+    "ejs": "^2.5.7",
+    "mysql": "^2.15.0"
   }
 }
