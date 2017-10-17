@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="assets/style.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     </head>
     <body>
         Hello world!
@@ -9,5 +10,15 @@
             Last Name <input type="text" name="lastname">
             <input type="submit" value="Submit!" />
         </form>
+        <script>
+            $.ajax({
+                type:"POST",
+                url:"/personjson",
+                data:JSON.stringify({firstname:"Ivan",lastname:"Prokopenko"}),
+                dataType:'json',
+                contentType: 'application/json'
+            })
+
+        </script>
     </body>
 </html>
