@@ -1,7 +1,9 @@
 var express =  require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var port = process.env.PORT || 3000;
+var mysql = require('mysql');
+
+var port = process.env.PORT || 3001;
 
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 
@@ -14,6 +16,18 @@ app.set('view engine','ejs');
 
 app.use('/',function(req,res,next){
     console.log('Request URL: '+req.url);
+    var conn = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'mafiarave_prod',
+    });
+
+    conn.query("SELECT * FROM models",function(err,rows){
+        if(err) throw err;
+            console.log(rows);
+    });
+
     next();
 });
 
