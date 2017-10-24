@@ -2,6 +2,29 @@ var express =  require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var mysql = require('mysql');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://test.mongolab.com:47030/adressbook'); //like a simple
+
+var Schema = mongoose.Schema;
+var personSchema = {
+    firstname : String,
+    lastname  : String,
+    address   : String
+}
+
+var Pseron = mongoose.model('Person',personSchema);
+
+var john = Person({
+    firstname: 'John',
+    lastname: 'Last',
+    address: "55 Main Str",
+});
+//save user
+john.save(function(err){
+    if(err) throw err;
+
+    console.log('person saved');
+})
 
 var port = process.env.PORT || 3001;
 
@@ -16,6 +39,12 @@ app.set('view engine','ejs');
 
 app.use('/',function(req,res,next){
     console.log('Request URL: '+req.url);
+Pserson.find({},function(err,users){
+    if (err) throw err;
+
+    console.log(users);
+})
+
     var conn = mysql.createConnection({
         host: 'localhost',
         user: 'root',
